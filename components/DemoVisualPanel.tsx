@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import type { CSSProperties } from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -212,19 +212,14 @@ const configs: Record<DemoVisualVariant, VariantConfig> = {
 
 export function DemoVisualPanel({ variant, className, compact = false }: DemoVisualPanelProps) {
   const config = configs[variant];
-  const reduceMotion = useReducedMotion();
 
   return (
-    <motion.div
+    <div
       className={cn(
-        "relative overflow-hidden rounded-3xl border border-white/85 bg-white/72 p-4 shadow-glass backdrop-blur-premium",
+        "reveal-on-load relative overflow-hidden rounded-3xl border border-white/85 bg-white/72 p-4 shadow-glass backdrop-blur-premium",
         compact ? "p-3" : "p-4",
         className
       )}
-      initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 10 }}
-      whileInView={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.35 }}
-      transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
     >
       <div className={cn("absolute inset-0 bg-gradient-to-br opacity-90", config.shellGradient)} aria-hidden />
       <div className="absolute -right-10 -top-10 h-24 w-24 rounded-full bg-white/45 blur-3xl" aria-hidden />
@@ -247,13 +242,10 @@ export function DemoVisualPanel({ variant, className, compact = false }: DemoVis
           <div className="rounded-2xl border border-white/75 bg-white/70 p-3">
             <div className="flex h-14 items-end gap-1.5">
               {config.bars.map((height, index) => (
-                <motion.div
+                <div
                   key={`${variant}-bar-${index}`}
                   className={cn("w-full rounded-t-md bg-gradient-to-t", config.barGradient)}
-                  initial={reduceMotion ? { height: `${height}%` } : { height: "18%" }}
-                  whileInView={{ height: `${height}%` }}
-                  viewport={{ once: true, amount: 0.5 }}
-                  transition={{ duration: 0.55, delay: index * 0.04, ease: [0.22, 1, 0.36, 1] }}
+                  style={{ height: `${height}%`, animationDelay: `${index * 0.04}s` } as CSSProperties}
                 />
               ))}
             </div>
@@ -278,6 +270,6 @@ export function DemoVisualPanel({ variant, className, compact = false }: DemoVis
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

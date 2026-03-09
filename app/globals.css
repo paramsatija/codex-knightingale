@@ -122,6 +122,22 @@ a {
     0 0 0 1px rgba(160, 137, 255, 0.2);
 }
 
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.reveal-on-load {
+  animation: revealUp 0.58s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--reveal-delay, 0s);
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -130,5 +146,11 @@ a {
     animation-iteration-count: 1 !important;
     transition-duration: 1ms !important;
     scroll-behavior: auto !important;
+  }
+
+  .reveal-on-load {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 }

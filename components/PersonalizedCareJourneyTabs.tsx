@@ -70,10 +70,10 @@ export function PersonalizedCareJourneyTabs({ steps }: PersonalizedCareJourneyTa
         className="glass-card relative overflow-hidden rounded-premium p-6"
       >
         <div className={cn("absolute inset-0 bg-gradient-to-br", tintClassMap[activeStep.tint])} aria-hidden />
-        <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait" initial={false}>
           <motion.div
             key={activeStep.id}
-            initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 14, scale: 0.985 }}
+            initial={false}
             animate={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0, scale: 1 }}
             exit={reduceMotion ? { opacity: 1 } : { opacity: 0, y: -8, scale: 0.99 }}
             transition={{ duration: reduceMotion ? 0.01 : 0.45, ease: [0.22, 1, 0.36, 1] }}

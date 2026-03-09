@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useReducedMotion } from "framer-motion";
+import type { CSSProperties } from "react";
 
 import type { VisualPhoto } from "@/lib/visuals";
 import { cn } from "@/lib/utils";
@@ -13,19 +13,15 @@ type PhotoShowcaseProps = {
 };
 
 export function PhotoShowcase({ items, className, compact = false }: PhotoShowcaseProps) {
-  const reduceMotion = useReducedMotion();
   const visible = compact ? items.slice(0, 2) : items.slice(0, 3);
 
   return (
     <div className={cn("grid gap-4", compact ? "sm:grid-cols-2" : "md:grid-cols-3", className)}>
       {visible.map((item, index) => (
-        <motion.figure
+        <figure
           key={`${item.src}-${index}`}
-          className="group relative overflow-hidden rounded-3xl border border-white/85 bg-white/55 shadow-glass transition duration-500 ease-premium hover:-translate-y-1"
-          initial={reduceMotion ? { opacity: 1 } : { opacity: 0, y: 12 }}
-          whileInView={reduceMotion ? { opacity: 1 } : { opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.25 }}
-          transition={{ duration: 0.45, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
+          className="reveal-on-load group relative overflow-hidden rounded-3xl border border-white/85 bg-white/55 shadow-glass transition duration-500 ease-premium hover:-translate-y-1"
+          style={{ "--reveal-delay": `${index * 0.06}s` } as CSSProperties}
         >
           <div className={cn("relative", compact ? "aspect-[5/4]" : "aspect-[4/3]")}>
             <Image
@@ -42,7 +38,7 @@ export function PhotoShowcase({ items, className, compact = false }: PhotoShowca
               <p className="mt-1 text-xs text-white/80">{item.source}</p>
             </figcaption>
           </div>
-        </motion.figure>
+        </figure>
       ))}
     </div>
   );
