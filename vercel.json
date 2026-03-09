@@ -1,5 +1,11 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": "nextjs",
-  "outputDirectory": ".next"
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "env": {
+    "BROWSERSLIST_IGNORE_OLD_DATA": "1",
+    "BASELINE_BROWSER_MAPPING_IGNORE_OLD_DATA": "1"
+  }
 }
