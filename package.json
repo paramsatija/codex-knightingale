@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build --webpack",
+    "build": "node ./scripts/run-with-filter.mjs next build --webpack",
     "start": "next start",
-    "lint": "eslint . --ext .ts,.tsx"
+    "lint": "node ./scripts/run-with-filter.mjs eslint . --ext .ts,.tsx"
   },
   "dependencies": {
     "framer-motion": "^12.23.24",
@@ -20,6 +20,8 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "autoprefixer": "^10.4.20",
+    "baseline-browser-mapping": "^2.10.0",
+    "cross-env": "^7.0.3",
     "eslint": "^9.18.0",
     "eslint-config-next": "^16.0.0",
     "postcss": "^8.4.49",
