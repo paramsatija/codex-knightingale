@@ -12,23 +12,27 @@ import { photoSets } from "@/lib/visuals";
 
 export const metadata: Metadata = {
   title: "Platform",
-  description: "Explore Knightingale's full care operating system for families, seniors, and professionals."
+  description: "Deep overview of Knightingale’s complete caregiving operating system."
 };
 
 export default function PlatformPage() {
   return (
     <div className="container-shell pb-20 pt-14">
       <AnimatedSection>
-        <p className="text-sm font-semibold uppercase tracking-[0.15em] text-sapphire">Platform overview</p>
-        <h1 className="hero-title mt-4 text-navy">The intelligent care platform built for real life.</h1>
-        <p className="mt-6 max-w-3xl text-lg leading-relaxed text-text-secondary">
-          Knightingale unifies care coordination, provider discovery, financial context, and emergency readiness
-          in one modern care operating system.
-        </p>
-
-        <div className="mt-8 grid gap-4 lg:grid-cols-2">
+        <div className="grid gap-8 lg:grid-cols-[1.08fr,0.92fr] lg:items-center">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-sapphire">Platform overview</p>
+            <h1 className="hero-title mt-4 text-navy">A full care operating system for modern families.</h1>
+            <p className="mt-6 max-w-3xl text-lg leading-relaxed text-text-secondary">
+              Knightingale unifies registration, onboarding, planning, provider booking, communication, records, finance,
+              health signals, emergency readiness, and settings in one coordinated experience.
+            </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <GradientCTAButton href="/early-access" label="Join Waitlist" />
+              <GradientCTAButton href="/features" label="Open Feature Demos" variant="secondary" />
+            </div>
+          </div>
           <DemoVisualPanel variant="dashboard" />
-          <DemoVisualPanel variant="careplan" />
         </div>
         <PhotoShowcase items={photoSets.platform} className="mt-4" />
       </AnimatedSection>
@@ -41,25 +45,53 @@ export default function PlatformPage() {
         </div>
       </AnimatedSection>
 
-      <AnimatedSection className="mt-16">
+      <AnimatedSection className="mt-14">
         <SplitFeatureBlock
-          eyebrow="Dashboard detail"
-          title="A calm command center for care decisions"
-          body="Priorities, care tasks, provider updates, and health alerts are surfaced in one glance so families can make faster, better decisions."
+          eyebrow="Registration + Onboarding"
+          title="Role-based registration and three-step personalization"
+          body="Users select caregiver or senior role, then complete health needs, caregiver profile, and AI care plan generation in a guided flow."
           points={[
-            "Urgent vs. upcoming separation",
-            "Care readiness and risk signals",
-            "Cross-household activity timeline"
+            "Condition and mobility capture",
+            "Stress and support network insights",
+            "AI-generated priorities and recommendations"
           ]}
           visual={
             <div className="grid gap-3">
               <AppMockupFrame
-                title="Smart dashboard"
-                subtitle="Today"
+                title="Onboarding flow"
+                subtitle="3 steps"
                 rows={[
-                  { label: "Priority actions", value: "3" },
-                  { label: "Medication reminders", value: "5" },
-                  { label: "Provider updates", value: "2" }
+                  { label: "Care conditions selected", value: "4" },
+                  { label: "Stress profile", value: "High" },
+                  { label: "Generated plan actions", value: "9" }
+                ]}
+              />
+              <DemoVisualPanel variant="onboarding" compact />
+            </div>
+          }
+        />
+      </AnimatedSection>
+
+      <AnimatedSection className="mt-14">
+        <SplitFeatureBlock
+          eyebrow="Daily command center"
+          title="Dashboard, alerts, quick actions, tasks, and events"
+          body="The dashboard surfaces what matters now and connects users directly to provider search, support groups, transport scheduling, and active tasks."
+          points={[
+            "Severity-ranked alerts",
+            "Upcoming events timeline",
+            "Recent messages and active tasks"
+          ]}
+          reverse
+          visual={
+            <div className="grid gap-3">
+              <AppMockupFrame
+                title="Personalized dashboard"
+                subtitle="Live status"
+                rows={[
+                  { label: "Critical alerts", value: "2" },
+                  { label: "Today events", value: "5" },
+                  { label: "Incomplete tasks", value: "7" }
                 ]}
               />
               <DemoVisualPanel variant="dashboard" compact />
@@ -70,79 +102,23 @@ export default function PlatformPage() {
 
       <AnimatedSection className="mt-14">
         <SplitFeatureBlock
-          eyebrow="Marketplace"
-          title="Provider discovery with better fit intelligence"
-          body="Search providers by care profile, continuity preferences, schedule, and budget with transparent match scoring."
+          eyebrow="Operations layer"
+          title="Marketplace, calendar, Kanban, messaging, and vault"
+          body="Core care logistics are connected so families can find providers, book support, manage schedules, move tasks, communicate, and share records without tool switching."
           points={[
-            "AI fit score per profile",
-            "Availability and response SLAs",
-            "Continuity-aware recommendations"
-          ]}
-          reverse
-          visual={
-            <div className="grid gap-3">
-              <AppMockupFrame
-                title="Provider marketplace"
-                subtitle="Recommended"
-                rows={[
-                  { label: "Top match", value: "93" },
-                  { label: "In-network options", value: "5" },
-                  { label: "Avg response", value: "< 2h" }
-                ]}
-              />
-              <DemoVisualPanel variant="network" compact />
-            </div>
-          }
-        />
-      </AnimatedSection>
-
-      <AnimatedSection className="mt-14">
-        <SplitFeatureBlock
-          eyebrow="Calendar + Tasks"
-          title="Shared execution for day-to-day care"
-          body="Appointments, medications, errands, and home responsibilities stay aligned with clear ownership across family and professional teams."
-          points={[
-            "Role-based assignments",
-            "Conflict detection in schedules",
-            "Reminder intelligence"
+            "Search + shortlist + book providers",
+            "Month calendar with medical/personal/transport coding",
+            "Real-time chat and secure document previews"
           ]}
           visual={
             <div className="grid gap-3">
               <AppMockupFrame
-                title="Care schedule"
-                subtitle="This week"
+                title="Care operations"
+                subtitle="Connected modules"
                 rows={[
-                  { label: "Appointments", value: "6" },
-                  { label: "Tasks done", value: "81%" },
-                  { label: "Conflicts", value: "1" }
-                ]}
-              />
-              <DemoVisualPanel variant="calendar" compact />
-            </div>
-          }
-        />
-      </AnimatedSection>
-
-      <AnimatedSection className="mt-14">
-        <SplitFeatureBlock
-          eyebrow="Messaging + Vault"
-          title="Secure communication and documents in one flow"
-          body="Sensitive conversations and critical records stay structured, permission-aware, and easy to retrieve."
-          points={[
-            "Private care threads",
-            "Document version awareness",
-            "Critical file quick access"
-          ]}
-          reverse
-          visual={
-            <div className="grid gap-3">
-              <AppMockupFrame
-                title="Secure records"
-                subtitle="Vault"
-                rows={[
-                  { label: "Legal docs", value: "12" },
-                  { label: "Coverage files", value: "9" },
-                  { label: "Recent shares", value: "4" }
+                  { label: "Provider matches", value: "5" },
+                  { label: "Calendar events", value: "12" },
+                  { label: "Vault files", value: "21" }
                 ]}
               />
               <DemoVisualPanel variant="documents" compact />
@@ -153,23 +129,24 @@ export default function PlatformPage() {
 
       <AnimatedSection className="mt-14">
         <SplitFeatureBlock
-          eyebrow="Financial + Eligibility + Health"
-          title="Care economics and health signals without spreadsheet chaos"
-          body="Track likely costs, benefits opportunities, and evolving health trends to reduce surprises and make proactive choices."
+          eyebrow="Intelligence layer"
+          title="Eligibility, finance projection, health monitoring, emergency, pet care, settings"
+          body="AI supports decisions across benefits, budgeting, health risks, and emergency response while keeping profiles, notifications, and security controls manageable."
           points={[
-            "Out-of-pocket forecasting",
-            "Program eligibility flags",
-            "Trend-based health summaries"
+            "Eligibility confidence scoring",
+            "Monthly care cost and gap forecasting",
+            "Emergency one-tap profile and settings governance"
           ]}
+          reverse
           visual={
             <div className="grid gap-3">
               <AppMockupFrame
-                title="Planning intelligence"
-                subtitle="30-day view"
+                title="Intelligence engine"
+                subtitle="Care risk + finance"
                 rows={[
-                  { label: "Budget variance", value: "+4%" },
-                  { label: "Eligible programs", value: "3" },
-                  { label: "Health signal trend", value: "Watch" }
+                  { label: "Program matches", value: "6" },
+                  { label: "Monthly cost gap", value: "$420" },
+                  { label: "Risk score", value: "Moderate" }
                 ]}
               />
               <DemoVisualPanel variant="finance" compact />
@@ -178,49 +155,20 @@ export default function PlatformPage() {
         />
       </AnimatedSection>
 
-      <AnimatedSection className="mt-14">
-        <SplitFeatureBlock
-          eyebrow="Emergency + Pet care"
-          title="Prepared for urgent moments and household realities"
-          body="Critical profile access and pet care management keep families resilient across unexpected events and daily routines."
-          points={[
-            "Emergency profile card",
-            "Instant instructions and contacts",
-            "Pet meds and appointment tracking"
-          ]}
-          reverse
-          visual={
-            <div className="grid gap-3">
-              <AppMockupFrame
-                title="Emergency ready"
-                subtitle="One-tap profile"
-                rows={[
-                  { label: "Critical data completeness", value: "96%" },
-                  { label: "Emergency contacts", value: "4" },
-                  { label: "Pet-care tasks", value: "7" }
-                ]}
-              />
-              <DemoVisualPanel variant="emergency" compact />
-            </div>
-          }
-        />
-      </AnimatedSection>
-
       <AnimatedSection className="mt-16">
         <div className="glass-card rounded-premium p-8">
-          <div className="grid gap-5 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
+          <div className="grid gap-6 lg:grid-cols-[1.08fr,0.92fr] lg:items-center">
             <div>
-              <h2 className="section-title text-navy">AI engine that supports people, not replaces them.</h2>
-              <p className="mt-4 max-w-3xl text-base leading-relaxed text-text-secondary">
-                The intelligence layer helps synthesize complexity and prioritize care actions while families and care
-                professionals stay in control of decisions.
+              <h2 className="section-title text-navy">Want this full platform configured for your care scenario?</h2>
+              <p className="mt-4 text-base leading-relaxed text-text-secondary">
+                Join waitlist onboarding and we’ll tailor the first rollout to your conditions, household dynamics, and care goals.
               </p>
-              <div className="mt-8 flex flex-wrap gap-3">
-                <GradientCTAButton href="/early-access" label="Join Waitlist" />
-                <GradientCTAButton href="/contact" label="Talk To Knightingale" variant="secondary" />
+              <div className="mt-7 flex flex-wrap gap-3">
+                <GradientCTAButton href="/early-access" label="Join Waitlist Now" />
+                <GradientCTAButton href="/contact" label="Book Platform Demo" variant="secondary" />
               </div>
             </div>
-            <DemoVisualPanel variant="onboarding" />
+            <DemoVisualPanel variant="careplan" />
           </div>
         </div>
       </AnimatedSection>

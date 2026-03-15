@@ -31,8 +31,8 @@ export function PhotoShowcase({ items, className, compact = false }: PhotoShowca
               sizes={compact ? "(max-width: 768px) 100vw, 50vw" : "(max-width: 768px) 100vw, 33vw"}
               className="object-cover transition duration-700 ease-premium group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-navy/82 via-sapphire/30 to-transparent" aria-hidden />
-            <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-lilac/35 to-transparent" aria-hidden />
+            <div className="absolute inset-0 bg-gradient-to-t from-coral/45 via-sapphire/24 to-transparent" aria-hidden />
+            <div className="absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-mint/30 to-transparent" aria-hidden />
             <figcaption className="absolute inset-x-0 bottom-0 p-4 text-white">
               <p className="text-sm font-semibold">{item.label}</p>
               <p className="mt-1 text-xs text-white/80">{item.source}</p>
