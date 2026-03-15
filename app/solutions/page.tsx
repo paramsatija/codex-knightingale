@@ -55,7 +55,7 @@ export default function SolutionsPage() {
                 clarity, operational structure, and confidence across the care lifecycle.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <GradientCTAButton href="/early-access" label="Request Early Access" />
+                <GradientCTAButton href="/early-access" label="Join Waitlist" />
                 <GradientCTAButton href="/contact" label="Partnership Inquiry" variant="secondary" />
               </div>
             </div>

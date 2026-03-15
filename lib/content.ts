@@ -142,116 +142,172 @@ export const homeFeatureCards: BentoCard[] = [
 
 export const featureShowcaseEntries: FeatureShowcaseEntry[] = [
   {
-    id: "ai-onboarding",
-    title: "AI Onboarding",
-    category: "Intelligence",
-    summary: "Guided intake turns household complexity into a clean care profile in minutes.",
+    id: "role-based-registration",
+    title: "Role-Based Registration",
+    category: "Onboarding",
+    summary: "Caregiver or senior signup launches the right onboarding path instantly.",
     demoVariant: "onboarding",
     tint: "sapphire",
     highlights: [
-      "Condition and medication profile capture",
-      "Family availability and care role mapping",
-      "Budget and support constraints normalized"
+      "Guided account setup flow",
+      "Role-aware profile creation",
+      "Immediate onboarding handoff"
     ],
-    outcome: "Start with structure, not chaos."
+    outcome: "Users get value in the first minute."
+  },
+  {
+    id: "ai-care-plan",
+    title: "AI Care Plan Generation",
+    category: "Intelligence",
+    summary: "Three-step onboarding becomes a personalized care plan with priorities and alerts.",
+    demoVariant: "careplan",
+    tint: "mint",
+    highlights: [
+      "Condition + mobility + finance analysis",
+      "Caregiver stress and support signal weighting",
+      "Actionable recommendations per household"
+    ],
+    outcome: "Families stop guessing and start coordinating."
   },
   {
     id: "priority-dashboard",
-    title: "Priority Dashboard",
-    category: "Coordination",
-    summary: "A single command center surfaces urgent actions, care signals, and team alignment.",
+    title: "Personalized Dashboard + Alerts",
+    category: "Daily Operations",
+    summary: "A single command center surfaces urgent actions, quick actions, tasks, events, and messages.",
     demoVariant: "dashboard",
-    tint: "mint",
-    highlights: [
-      "Urgent vs. upcoming care separation",
-      "Live care readiness score",
-      "Household timeline with shared accountability"
-    ],
-    outcome: "Know exactly what matters now."
-  },
-  {
-    id: "provider-matching",
-    title: "Provider Matching",
-    category: "Marketplace",
-    summary: "Compare provider options with fit scores, continuity context, and real availability.",
-    demoVariant: "network",
     tint: "lilac",
     highlights: [
-      "Need-based fit scoring",
-      "Transparent availability and response pace",
-      "Family preference-aware ranking"
+      "Severity-ranked AI alerts",
+      "Upcoming event timeline",
+      "Recent task and message snapshots"
     ],
-    outcome: "Book with confidence, faster."
+    outcome: "The right next action is always visible."
   },
   {
-    id: "calendar-tasks",
-    title: "Calendar + Task Board",
-    category: "Execution",
-    summary: "Appointments, reminders, and responsibilities stay synchronized across the whole care team.",
-    demoVariant: "calendar",
+    id: "provider-marketplace",
+    title: "Provider Marketplace + Matching",
+    category: "Marketplace",
+    summary: "Search, filter, shortlist, and match with vetted providers based on real care needs.",
+    demoVariant: "network",
     tint: "gold",
     highlights: [
-      "Role-based task ownership",
-      "Conflict and handoff visibility",
-      "Missed-step prevention reminders"
+      "Specialization and price filtering",
+      "AI match scoring from onboarding profile",
+      "Favorites shortlist and fast booking"
     ],
-    outcome: "Turn plans into daily follow-through."
+    outcome: "Booking decisions become faster and safer."
   },
   {
-    id: "documents-messaging",
-    title: "Secure Documents + Messaging",
-    category: "Trust",
-    summary: "Sensitive files and care communication stay organized, permission-aware, and retrievable.",
-    demoVariant: "documents",
+    id: "calendar-and-kanban",
+    title: "Calendar + Kanban Tasks",
+    category: "Execution",
+    summary: "Medical, transport, and personal events stay in sync with drag-and-drop care tasks.",
+    demoVariant: "timeline",
     tint: "navy",
     highlights: [
-      "Document vault with clear access levels",
-      "Context-aware care message threads",
-      "Critical record fast retrieval flow"
+      "Month calendar with event-type coding",
+      "To Do / In Progress / Done board",
+      "Due-date and urgency prioritization"
     ],
-    outcome: "Nothing important gets lost."
+    outcome: "Care plans translate to daily execution."
   },
   {
-    id: "care-finance",
-    title: "Finance + Eligibility",
-    category: "Planning",
-    summary: "Forecast costs, identify support opportunities, and reduce financial surprises.",
-    demoVariant: "finance",
+    id: "messaging-and-vault",
+    title: "Real-Time Messaging + Document Vault",
+    category: "Coordination",
+    summary: "Secure conversations and critical records stay accessible, shareable, and organized.",
+    demoVariant: "documents",
     tint: "sapphire",
     highlights: [
-      "Out-of-pocket gap forecasting",
-      "Program eligibility signal checks",
-      "Budget trend monitoring"
+      "Real-time care threads",
+      "Drag-and-drop uploads and previews",
+      "Permission-aware sharing"
     ],
-    outcome: "Plan ahead with less risk."
+    outcome: "No more lost documents or fragmented threads."
   },
   {
-    id: "health-alerts",
-    title: "Health Signals + Alerts",
-    category: "Monitoring",
-    summary: "Track health changes and surface meaningful alerts before issues escalate.",
-    demoVariant: "alerts",
+    id: "knowledge-and-forums",
+    title: "Knowledge Library + Community Forums",
+    category: "Support",
+    summary: "Educational content and peer conversations reduce isolation and improve decisions.",
+    demoVariant: "community",
     tint: "mint",
     highlights: [
-      "Signal trend detection",
-      "Severity-ranked care alerts",
-      "Action recommendation summaries"
+      "Category-based article discovery",
+      "Tagged caregiver discussion threads",
+      "AI moderation for safer participation"
     ],
-    outcome: "Act earlier with better context."
+    outcome: "Caregivers feel supported, not alone."
   },
   {
-    id: "emergency-readiness",
-    title: "Emergency Readiness",
-    category: "Safety",
-    summary: "Critical profile data is one tap away when seconds matter most.",
-    demoVariant: "emergency",
+    id: "eligibility-checker",
+    title: "Government Program Eligibility",
+    category: "Benefits",
+    summary: "State, ZIP, age, and income are analyzed against real assistance programs.",
+    demoVariant: "pricing",
+    tint: "gold",
+    highlights: [
+      "Eligibility confidence scoring",
+      "Benefit and requirement breakdowns",
+      "Direct application links"
+    ],
+    outcome: "Families unlock support they usually miss."
+  },
+  {
+    id: "finance-projections",
+    title: "Financial Planning + Projections",
+    category: "Finance",
+    summary: "Real-time sliders project monthly care costs, gaps, and savings opportunities.",
+    demoVariant: "finance",
     tint: "lilac",
     highlights: [
-      "Contacts, allergies, and key records bundle",
-      "Rapid response instruction cards",
-      "Emergency data freshness tracking"
+      "Income/expense/care-hour modeling",
+      "Gap forecasting and cost pressure alerts",
+      "Tax deduction and savings suggestions"
     ],
-    outcome: "Be prepared before crisis moments."
+    outcome: "Financial stress becomes manageable planning."
+  },
+  {
+    id: "health-risk-monitoring",
+    title: "Health Monitoring + Risk AI",
+    category: "Health",
+    summary: "Wearable and health signals convert into risk insights, alerts, and recommendations.",
+    demoVariant: "alerts",
+    tint: "sapphire",
+    highlights: [
+      "Severity-tiered health alerts",
+      "Condition and activity trend analysis",
+      "Preventive recommendation prompts"
+    ],
+    outcome: "Families act before risk escalates."
+  },
+  {
+    id: "emergency-access",
+    title: "Emergency Access",
+    category: "Safety",
+    summary: "Critical actions and records are one tap away in urgent situations.",
+    demoVariant: "emergency",
+    tint: "mint",
+    highlights: [
+      "911 action and emergency controls",
+      "Critical alert and contact access",
+      "Provider and record shortcuts"
+    ],
+    outcome: "Response time improves when seconds matter."
+  },
+  {
+    id: "pet-care-and-settings",
+    title: "Pet Care + Settings Security",
+    category: "Lifestyle",
+    summary: "Companion care reminders and account security controls support real household needs.",
+    demoVariant: "city",
+    tint: "lilac",
+    highlights: [
+      "Pet reminder schedules",
+      "Notification and preference controls",
+      "Password, 2FA, and account safeguards"
+    ],
+    outcome: "Care operations stay complete and reliable."
   }
 ];
 
@@ -508,33 +564,63 @@ export const solutionTiles = [
 export const howItWorksSteps = [
   {
     number: "01",
-    title: "Create account",
-    desc: "Set up family profile and baseline care context."
+    title: "Register by role",
+    desc: "Choose caregiver or senior, then create your secure account."
   },
   {
     number: "02",
-    title: "Complete 3-step onboarding",
-    desc: "Share goals, constraints, and household details in plain language."
+    title: "Onboarding step 1: care needs",
+    desc: "Select conditions, mobility level, and financial context."
   },
   {
     number: "03",
-    title: "Receive AI care plan",
-    desc: "Get personalized priorities and a practical week-one roadmap."
+    title: "Onboarding step 2: caregiver profile",
+    desc: "Add relationship, stress level, support network, and conditional care needs."
   },
   {
     number: "04",
-    title: "Coordinate daily care",
-    desc: "Run calendar, tasks, documents, and messaging from one platform."
+    title: "Onboarding step 3: AI care plan",
+    desc: "Receive prioritized risks, recommendations, and actionable next steps."
   },
   {
     number: "05",
-    title: "Book providers + manage tasks",
-    desc: "Find the right support and keep everyone aligned on execution."
+    title: "Open personalized dashboard",
+    desc: "Track alerts, quick actions, active tasks, upcoming events, and recent messages."
   },
   {
     number: "06",
+    title: "Find and book providers",
+    desc: "Search, filter, match, shortlist, and book verified care providers."
+  },
+  {
+    number: "07",
+    title: "Manage calendar and tasks",
+    desc: "Coordinate month-view events and Kanban task execution across teams."
+  },
+  {
+    number: "08",
+    title: "Communicate and share records",
+    desc: "Use real-time messaging and secure document vault workflows."
+  },
+  {
+    number: "09",
+    title: "Use library and forums",
+    desc: "Access caregiving knowledge and connect with peer support communities."
+  },
+  {
+    number: "10",
+    title: "Check benefits and finances",
+    desc: "Run eligibility checks and financial projections to reduce cost uncertainty."
+  },
+  {
+    number: "11",
+    title: "Monitor health and risk",
+    desc: "Track alerts from health data and receive predictive recommendations."
+  },
+  {
+    number: "12",
     title: "Stay emergency-ready",
-    desc: "Keep critical information accessible and current for urgent events."
+    desc: "Keep 911 actions, critical records, providers, and care contacts instantly accessible."
   }
 ];
 
@@ -559,7 +645,7 @@ export const contactFields: FormFieldConfig[] = [
     label: "Role",
     type: "select",
     required: true,
-    options: ["Caregiver", "Provider", "Partner", "Investor", "Other"]
+    options: ["Family caregiver", "Senior", "Professional caregiver", "Provider", "Partner", "Investor", "Other"]
   },
   {
     id: "message",

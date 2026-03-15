@@ -9,9 +9,27 @@ import { earlyAccessFields } from "@/lib/content";
 import { photoSets } from "@/lib/visuals";
 
 export const metadata: Metadata = {
-  title: "Early Access",
-  description: "Join Knightingale early access for personalized demo and priority onboarding."
+  title: "Join Waitlist",
+  description: "Request priority access to Knightingale with guided onboarding and personalized setup."
 };
+
+const benefits = [
+  {
+    title: "Priority onboarding",
+    text: "Get a guided setup path tailored to your caregiving context.",
+    tint: "bg-tint-sapphire"
+  },
+  {
+    title: "Personalized rollout",
+    text: "Receive recommended modules and first-week action plan immediately.",
+    tint: "bg-tint-mint"
+  },
+  {
+    title: "Early feature access",
+    text: "Preview new AI capabilities and marketplace enhancements before broad release.",
+    tint: "bg-tint-gold"
+  }
+];
 
 export default function EarlyAccessPage() {
   return (
@@ -19,39 +37,33 @@ export default function EarlyAccessPage() {
       <AnimatedSection>
         <div className="grid gap-10 lg:grid-cols-[0.95fr,1.05fr] lg:items-start">
           <div>
-            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-sapphire">Early Access</p>
-            <h1 className="hero-title mt-4 text-navy">Get priority access to Knightingale.</h1>
+            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-sapphire">Waitlist</p>
+            <h1 className="hero-title mt-4 text-navy">Join Knightingale early and launch with confidence.</h1>
             <p className="mt-5 text-base leading-relaxed text-text-secondary">
-              Join the first wave of families and care teams shaping a modern care operating system.
+              Join the first wave of caregivers, seniors, and care organizations shaping the future of coordinated care.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
-              <GradientCTAButton href="/features" label="See Live Feature Demos" variant="secondary" />
+              <GradientCTAButton href="/features" label="Review Features First" variant="secondary" />
             </div>
 
             <DemoVisualPanel variant="onboarding" className="mt-6" />
             <PhotoShowcase items={photoSets.howItWorks} compact className="mt-4" />
 
             <div className="mt-8 grid gap-3">
-              <article className="glass-card rounded-2xl p-4">
-                <h2 className="text-base font-semibold text-navy">What you get</h2>
-                <p className="mt-2 text-sm text-text-secondary">Personalized setup review and guided care workflow activation.</p>
-              </article>
-              <article className="glass-card rounded-2xl p-4">
-                <h2 className="text-base font-semibold text-navy">Who this is for</h2>
-                <p className="mt-2 text-sm text-text-secondary">Family caregivers, seniors, professionals, and care organizations.</p>
-              </article>
-              <article className="glass-card rounded-2xl p-4">
-                <h2 className="text-base font-semibold text-navy">Location context</h2>
-                <p className="mt-2 text-sm text-text-secondary">Designed in Chicago for U.S. caregiving realities.</p>
-              </article>
+              {benefits.map((item) => (
+                <article key={item.title} className={`glass-card rounded-2xl p-4 ${item.tint}`}>
+                  <h2 className="text-base font-semibold text-navy">{item.title}</h2>
+                  <p className="mt-2 text-sm text-text-secondary">{item.text}</p>
+                </article>
+              ))}
             </div>
           </div>
 
           <div className="grid gap-4">
             <DemoVisualPanel variant="careplan" compact />
             <ContactFormCard
-              title="Join The Waitlist"
-              subtitle="Share your care context and we’ll tailor your demo and onboarding path."
+              title="Join Waitlist Now"
+              subtitle="Tell us who you support and what your top care goals are so we can tailor your onboarding."
               ctaLabel="Join Waitlist"
               fields={earlyAccessFields}
             />

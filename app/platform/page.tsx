@@ -216,8 +216,8 @@ export default function PlatformPage() {
                 professionals stay in control of decisions.
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
-                <GradientCTAButton href="/early-access" label="Book a Demo" />
-                <GradientCTAButton href="/contact" label="Talk to Knightingale" variant="secondary" />
+                <GradientCTAButton href="/early-access" label="Join Waitlist" />
+                <GradientCTAButton href="/contact" label="Talk To Knightingale" variant="secondary" />
               </div>
             </div>
             <DemoVisualPanel variant="onboarding" />

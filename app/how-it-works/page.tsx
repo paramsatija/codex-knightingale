@@ -13,7 +13,20 @@ export const metadata: Metadata = {
   description: "See how Knightingale moves families from onboarding to daily personalized care coordination."
 };
 
-const stepVisuals = ["onboarding", "dashboard", "careplan", "calendar", "network", "emergency"] as const;
+const stepVisuals = [
+  "onboarding",
+  "onboarding",
+  "careplan",
+  "careplan",
+  "dashboard",
+  "network",
+  "calendar",
+  "documents",
+  "community",
+  "finance",
+  "alerts",
+  "emergency"
+] as const;
 
 export default function HowItWorksPage() {
   return (
@@ -61,10 +74,10 @@ export default function HowItWorksPage() {
         <div className="glass-card rounded-premium p-8">
           <div className="grid gap-6 lg:grid-cols-[1.1fr,0.9fr] lg:items-center">
             <div>
-              <h2 className="section-title text-navy">Ready to see your care journey mapped in real-time?</h2>
+              <h2 className="section-title text-navy">Ready to see this full journey mapped to your family profile?</h2>
               <div className="mt-7 flex flex-wrap gap-3">
-                <GradientCTAButton href="/early-access" label="Book a Demo" />
-                <GradientCTAButton href="/contact" label="Speak to a Specialist" variant="secondary" />
+                <GradientCTAButton href="/early-access" label="Join Waitlist" />
+                <GradientCTAButton href="/contact" label="Speak To A Specialist" variant="secondary" />
               </div>
             </div>
             <DemoVisualPanel variant="careplan" />

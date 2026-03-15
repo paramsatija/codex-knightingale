@@ -10,51 +10,49 @@ import { photoSets } from "@/lib/visuals";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch with Knightingale for demos, partnerships, and inquiries."
+  description: "Talk with Knightingale about demos, partnerships, and onboarding support."
 };
+
+const contactCards = [
+  { label: "Email", value: "hello@knightingale.ai", tint: "bg-tint-sapphire" },
+  { label: "Headquarters", value: "Chicago, Illinois, USA", tint: "bg-tint-mint" },
+  { label: "Response Time", value: "Typically within 1 business day", tint: "bg-tint-gold" }
+];
 
 export default function ContactPage() {
   return (
     <div className="container-shell pb-20 pt-14">
       <AnimatedSection>
-        <div className="grid gap-10 lg:grid-cols-[0.9fr,1.1fr] lg:items-start">
+        <div className="grid gap-10 lg:grid-cols-[0.95fr,1.05fr] lg:items-start">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.15em] text-sapphire">Contact</p>
-            <h1 className="hero-title mt-4 text-navy">Let’s design better care coordination together.</h1>
+            <h1 className="hero-title mt-4 text-navy">Let’s design a better care experience together.</h1>
             <p className="mt-5 text-base leading-relaxed text-text-secondary">
-              Reach out for demo requests, early access, partnership conversations, or strategic collaboration.
+              Reach out for product demos, provider partnerships, implementation planning, or early access support.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <GradientCTAButton href="/early-access" label="Join Waitlist" />
-              <GradientCTAButton href="/features" label="View Features" variant="secondary" />
+              <GradientCTAButton href="/features" label="See Feature Demos" variant="secondary" />
             </div>
 
-            <DemoVisualPanel variant="city" className="mt-6" />
+            <DemoVisualPanel variant="partnership" className="mt-6" />
             <PhotoShowcase items={photoSets.contact} compact className="mt-4" />
 
             <div className="mt-8 grid gap-3">
-              <div className="glass-card rounded-2xl p-4 text-sm text-navy">
-                <p className="font-semibold">Email</p>
-                <p className="mt-1 text-text-secondary">hello@knightingale.ai</p>
-              </div>
-              <div className="glass-card rounded-2xl p-4 text-sm text-navy">
-                <p className="font-semibold">Presence</p>
-                <p className="mt-1 text-text-secondary">Chicago, Illinois, USA</p>
-              </div>
-              <div className="glass-card rounded-2xl p-4 text-sm text-navy">
-                <p className="font-semibold">Trust note</p>
-                <p className="mt-1 text-text-secondary">
-                  We treat all inquiry information with care and use it only for direct follow-up.
-                </p>
-              </div>
+              {contactCards.map((card) => (
+                <div key={card.label} className={`glass-card rounded-2xl p-4 text-sm text-navy ${card.tint}`}>
+                  <p className="font-semibold">{card.label}</p>
+                  <p className="mt-1 text-text-secondary">{card.value}</p>
+                </div>
+              ))}
             </div>
           </div>
 
           <div className="grid gap-4">
-            <DemoVisualPanel variant="partnership" compact />
+            <DemoVisualPanel variant="network" compact />
             <ContactFormCard
-              title="Send Inquiry"
-              subtitle="Tell us your context and goals. We will follow up with the right next step."
+              title="Book Demo Or Send Inquiry"
+              subtitle="Share your context and goals. We’ll route you to the right next step quickly."
               ctaLabel="Send Inquiry"
               fields={contactFields}
             />
