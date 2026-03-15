@@ -68,9 +68,9 @@ export function PremiumNav() {
             <div className="hidden lg:block">
               <Link
                 href="/early-access"
-                className="inline-flex rounded-full bg-gradient-to-r from-sapphire/90 via-lilac/85 to-mint/85 px-5 py-2.5 text-sm font-semibold text-white shadow-float transition duration-500 hover:brightness-110"
+                className="cta-heavy inline-flex rounded-full bg-gradient-to-r from-sapphire via-lilac to-mint px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(63,109,255,0.32)] transition duration-500 hover:-translate-y-0.5 hover:brightness-110"
               >
-                Book Demo
+                Join Waitlist
               </Link>
             </div>
             <button
@@ -111,9 +111,9 @@ export function PremiumNav() {
                 <Link
                   href="/early-access"
                   onClick={() => setMobileOpen(false)}
-                  className="block rounded-2xl bg-gradient-to-r from-sapphire via-lilac to-mint px-4 py-3 text-center text-sm font-semibold text-white"
+                  className="cta-heavy block rounded-2xl bg-gradient-to-r from-sapphire via-lilac to-mint px-4 py-3 text-center text-sm font-semibold text-white"
                 >
-                  Request Early Access
+                  Join Waitlist
                 </Link>
               </li>
             </ul>

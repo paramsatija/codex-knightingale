@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { ContactFormCard } from "@/components/ContactFormCard";
 import { DemoVisualPanel } from "@/components/DemoVisualPanel";
+import { GradientCTAButton } from "@/components/GradientCTAButton";
 import { PhotoShowcase } from "@/components/PhotoShowcase";
 import { earlyAccessFields } from "@/lib/content";
 import { photoSets } from "@/lib/visuals";
@@ -23,6 +24,9 @@ export default function EarlyAccessPage() {
             <p className="mt-5 text-base leading-relaxed text-text-secondary">
               Join the first wave of families and care teams shaping a modern care operating system.
             </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <GradientCTAButton href="/features" label="See Live Feature Demos" variant="secondary" />
+            </div>
 
             <DemoVisualPanel variant="onboarding" className="mt-6" />
             <PhotoShowcase items={photoSets.howItWorks} compact className="mt-4" />
@@ -46,9 +50,9 @@ export default function EarlyAccessPage() {
           <div className="grid gap-4">
             <DemoVisualPanel variant="careplan" compact />
             <ContactFormCard
-              title="Request Early Access"
+              title="Join The Waitlist"
               subtitle="Share your care context and we’ll tailor your demo and onboarding path."
-              ctaLabel="Request Early Access"
+              ctaLabel="Join Waitlist"
               fields={earlyAccessFields}
             />
           </div>

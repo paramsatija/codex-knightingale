@@ -122,6 +122,32 @@ a {
     0 0 0 1px rgba(160, 137, 255, 0.2);
 }
 
+@keyframes ctaPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(76, 125, 255, 0.42);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(76, 125, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(76, 125, 255, 0);
+  }
+}
+
+.cta-heavy {
+  position: relative;
+  isolation: isolate;
+}
+
+.cta-heavy::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  animation: ctaPulse 2.4s ease-out infinite;
+  pointer-events: none;
+}
+
 @keyframes revealUp {
   from {
     opacity: 0;
@@ -152,5 +178,9 @@ a {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+
+  .cta-heavy::after {
+    animation: none;
   }
 }

@@ -2,18 +2,17 @@ import Link from "next/link";
 
 const footerColumns = {
   Product: [
-    { label: "Platform", href: "/platform" },
-    { label: "How It Works", href: "/how-it-works" },
+    { label: "Features", href: "/features" },
     { label: "Pricing", href: "/pricing" }
   ],
-  Solutions: [
-    { label: "Family Caregivers", href: "/solutions" },
-    { label: "Seniors", href: "/solutions" },
-    { label: "Professional Teams", href: "/solutions" }
+  Conversion: [
+    { label: "Join Waitlist", href: "/early-access" },
+    { label: "Book Demo", href: "/early-access" },
+    { label: "Contact Sales", href: "/contact" }
   ],
   Company: [
     { label: "About", href: "/about" },
-    { label: "Early Access", href: "/early-access" },
+    { label: "Features", href: "/features" },
     { label: "Contact", href: "/contact" }
   ],
   Contact: [
@@ -45,7 +44,7 @@ export function SiteFooter() {
 
         <div className="mt-12 flex flex-col gap-3 border-t border-white/15 pt-6 text-sm text-white/65 md:flex-row md:items-center md:justify-between">
           <p>© {new Date().getFullYear()} Knightingale. All rights reserved.</p>
-          <p>Chicago, Illinois · Privacy · Terms · X · LinkedIn</p>
+          <p>Chicago, Illinois · Privacy · Terms · Join Waitlist</p>
         </div>
       </div>
     </footer>

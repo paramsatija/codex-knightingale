@@ -94,7 +94,7 @@ export function ContactFormCard({ title, subtitle, ctaLabel, fields }: ContactFo
 
         <button
           type="submit"
-          className="mt-2 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sapphire via-lilac to-mint px-5 py-3 text-sm font-semibold text-white shadow-float transition duration-500 hover:brightness-110"
+          className="cta-heavy mt-2 inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sapphire via-lilac to-mint px-6 py-3.5 text-sm font-semibold text-white shadow-[0_16px_42px_rgba(63,109,255,0.34)] transition duration-500 hover:-translate-y-0.5 hover:brightness-110"
         >
           {ctaLabel}
         </button>

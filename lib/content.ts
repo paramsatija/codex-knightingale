@@ -2,6 +2,7 @@ import type {
   AudienceSegment,
   BentoCard,
   FeatureCard,
+  FeatureShowcaseEntry,
   FormFieldConfig,
   JourneyStep,
   NavItem,
@@ -10,9 +11,7 @@ import type {
 
 export const navItems: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Platform", href: "/platform" },
-  { label: "Solutions", href: "/solutions" },
-  { label: "How It Works", href: "/how-it-works" },
+  { label: "Features", href: "/features" },
   { label: "Pricing", href: "/pricing" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" }
@@ -138,6 +137,121 @@ export const homeFeatureCards: BentoCard[] = [
     description: "Coordinate feeding, meds, appointments, and backup pet support.",
     tint: "mint",
     icon: "PawPrint"
+  }
+];
+
+export const featureShowcaseEntries: FeatureShowcaseEntry[] = [
+  {
+    id: "ai-onboarding",
+    title: "AI Onboarding",
+    category: "Intelligence",
+    summary: "Guided intake turns household complexity into a clean care profile in minutes.",
+    demoVariant: "onboarding",
+    tint: "sapphire",
+    highlights: [
+      "Condition and medication profile capture",
+      "Family availability and care role mapping",
+      "Budget and support constraints normalized"
+    ],
+    outcome: "Start with structure, not chaos."
+  },
+  {
+    id: "priority-dashboard",
+    title: "Priority Dashboard",
+    category: "Coordination",
+    summary: "A single command center surfaces urgent actions, care signals, and team alignment.",
+    demoVariant: "dashboard",
+    tint: "mint",
+    highlights: [
+      "Urgent vs. upcoming care separation",
+      "Live care readiness score",
+      "Household timeline with shared accountability"
+    ],
+    outcome: "Know exactly what matters now."
+  },
+  {
+    id: "provider-matching",
+    title: "Provider Matching",
+    category: "Marketplace",
+    summary: "Compare provider options with fit scores, continuity context, and real availability.",
+    demoVariant: "network",
+    tint: "lilac",
+    highlights: [
+      "Need-based fit scoring",
+      "Transparent availability and response pace",
+      "Family preference-aware ranking"
+    ],
+    outcome: "Book with confidence, faster."
+  },
+  {
+    id: "calendar-tasks",
+    title: "Calendar + Task Board",
+    category: "Execution",
+    summary: "Appointments, reminders, and responsibilities stay synchronized across the whole care team.",
+    demoVariant: "calendar",
+    tint: "gold",
+    highlights: [
+      "Role-based task ownership",
+      "Conflict and handoff visibility",
+      "Missed-step prevention reminders"
+    ],
+    outcome: "Turn plans into daily follow-through."
+  },
+  {
+    id: "documents-messaging",
+    title: "Secure Documents + Messaging",
+    category: "Trust",
+    summary: "Sensitive files and care communication stay organized, permission-aware, and retrievable.",
+    demoVariant: "documents",
+    tint: "navy",
+    highlights: [
+      "Document vault with clear access levels",
+      "Context-aware care message threads",
+      "Critical record fast retrieval flow"
+    ],
+    outcome: "Nothing important gets lost."
+  },
+  {
+    id: "care-finance",
+    title: "Finance + Eligibility",
+    category: "Planning",
+    summary: "Forecast costs, identify support opportunities, and reduce financial surprises.",
+    demoVariant: "finance",
+    tint: "sapphire",
+    highlights: [
+      "Out-of-pocket gap forecasting",
+      "Program eligibility signal checks",
+      "Budget trend monitoring"
+    ],
+    outcome: "Plan ahead with less risk."
+  },
+  {
+    id: "health-alerts",
+    title: "Health Signals + Alerts",
+    category: "Monitoring",
+    summary: "Track health changes and surface meaningful alerts before issues escalate.",
+    demoVariant: "alerts",
+    tint: "mint",
+    highlights: [
+      "Signal trend detection",
+      "Severity-ranked care alerts",
+      "Action recommendation summaries"
+    ],
+    outcome: "Act earlier with better context."
+  },
+  {
+    id: "emergency-readiness",
+    title: "Emergency Readiness",
+    category: "Safety",
+    summary: "Critical profile data is one tap away when seconds matter most.",
+    demoVariant: "emergency",
+    tint: "lilac",
+    highlights: [
+      "Contacts, allergies, and key records bundle",
+      "Rapid response instruction cards",
+      "Emergency data freshness tracking"
+    ],
+    outcome: "Be prepared before crisis moments."
   }
 ];
 

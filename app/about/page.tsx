@@ -24,6 +24,10 @@ export default function AboutPage() {
             <p className="mt-6 max-w-3xl text-lg text-text-secondary">
               Knightingale exists to restore clarity and dignity for families and care teams navigating complex daily realities.
             </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <GradientCTAButton href="/early-access" label="Join Waitlist" />
+              <GradientCTAButton href="/features" label="View Features" variant="secondary" />
+            </div>
           </div>
           <DemoVisualPanel variant="city" />
         </div>
@@ -77,7 +81,7 @@ export default function AboutPage() {
                 face every day across the U.S.
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
-                <GradientCTAButton href="/early-access" label="Request Early Access" />
+                <GradientCTAButton href="/early-access" label="Join Waitlist Now" />
                 <GradientCTAButton href="/contact" label="Contact Knightingale" variant="secondary" />
               </div>
             </div>

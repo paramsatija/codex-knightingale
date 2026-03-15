@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { ContactFormCard } from "@/components/ContactFormCard";
 import { DemoVisualPanel } from "@/components/DemoVisualPanel";
+import { GradientCTAButton } from "@/components/GradientCTAButton";
 import { PhotoShowcase } from "@/components/PhotoShowcase";
 import { contactFields } from "@/lib/content";
 import { photoSets } from "@/lib/visuals";
@@ -23,6 +24,10 @@ export default function ContactPage() {
             <p className="mt-5 text-base leading-relaxed text-text-secondary">
               Reach out for demo requests, early access, partnership conversations, or strategic collaboration.
             </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <GradientCTAButton href="/early-access" label="Join Waitlist" />
+              <GradientCTAButton href="/features" label="View Features" variant="secondary" />
+            </div>
 
             <DemoVisualPanel variant="city" className="mt-6" />
             <PhotoShowcase items={photoSets.contact} compact className="mt-4" />

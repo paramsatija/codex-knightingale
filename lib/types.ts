@@ -50,3 +50,28 @@ export type SeoMeta = {
   title: string;
   description: string;
 };
+
+export type FeatureShowcaseEntry = {
+  id: string;
+  title: string;
+  category: string;
+  summary: string;
+  demoVariant:
+    | "dashboard"
+    | "timeline"
+    | "finance"
+    | "alerts"
+    | "careplan"
+    | "network"
+    | "documents"
+    | "calendar"
+    | "onboarding"
+    | "community"
+    | "emergency"
+    | "partnership"
+    | "pricing"
+    | "city";
+  tint: "sapphire" | "mint" | "lilac" | "gold" | "navy";
+  highlights: string[];
+  outcome: string;
+};

@@ -44,6 +44,10 @@ export default function PricingPage() {
               Knightingale pricing is currently structured through early-access conversations to ensure the right fit by
               household and organization needs.
             </p>
+            <div className="mt-7 flex flex-wrap gap-3">
+              <GradientCTAButton href="/early-access" label="Join Waitlist" />
+              <GradientCTAButton href="/contact" label="Book Sales Call" variant="secondary" />
+            </div>
           </div>
           <DemoVisualPanel variant="pricing" />
         </div>
@@ -76,7 +80,7 @@ export default function PricingPage() {
             <DemoVisualPanel variant="partnership" compact />
           </div>
           <div className="mt-7 flex flex-wrap items-center justify-center gap-3">
-            <GradientCTAButton href="/early-access" label="Request Early Access" />
+            <GradientCTAButton href="/early-access" label="Join Waitlist Now" />
             <GradientCTAButton href="/contact" label="Partnership Inquiry" variant="secondary" />
           </div>
         </div>

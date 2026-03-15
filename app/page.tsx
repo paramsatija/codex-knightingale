@@ -28,45 +28,45 @@ const pageCards: {
   tag: string;
 }[] = [
   {
-    title: "Platform",
-    href: "/platform",
-    description: "Deep feature tour across dashboard, provider marketplace, calendar, docs, finance, and emergency readiness.",
+    title: "Features",
+    href: "/features",
+    description: "Dark interactive bento demos for every core capability, from AI onboarding to emergency readiness.",
     visual: "dashboard",
-    tag: "Product"
-  },
-  {
-    title: "Solutions",
-    href: "/solutions",
-    description: "Role-specific value for family caregivers, seniors, professionals, provider organizations, and systems.",
-    visual: "community",
-    tag: "Audience"
-  },
-  {
-    title: "How It Works",
-    href: "/how-it-works",
-    description: "See the full journey: AI onboarding, personalized results, personalized care, and adaptive coordination.",
-    visual: "onboarding",
-    tag: "Journey"
-  },
-  {
-    title: "About",
-    href: "/about",
-    description: "Mission, philosophy, and why Knightingale is built in Chicago for modern American caregiving realities.",
-    visual: "city",
-    tag: "Trust"
+    tag: "Product demo"
   },
   {
     title: "Pricing",
     href: "/pricing",
-    description: "Simple premium access structure for families, concierge support, and partner conversations.",
+    description: "Premium access tracks designed for families, concierge workflows, and partner organizations.",
     visual: "pricing",
     tag: "Plans"
   },
   {
-    title: "Contact & Early Access",
-    href: "/early-access",
-    description: "Book a demo, request early access, or connect with the team for partnership conversations.",
+    title: "About",
+    href: "/about",
+    description: "Mission, trust philosophy, and Chicago roots behind the Knightingale product vision.",
+    visual: "city",
+    tag: "Trust"
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+    description: "Connect with our team for demos, partnerships, or implementation conversations.",
     visual: "network",
+    tag: "Sales"
+  },
+  {
+    title: "Join Waitlist",
+    href: "/early-access",
+    description: "Request priority onboarding and get early product access tailored to your care context.",
+    visual: "careplan",
+    tag: "Conversion"
+  },
+  {
+    title: "Book Demo",
+    href: "/early-access",
+    description: "Get a guided walkthrough of how Knightingale fits your family or organization workflows.",
+    visual: "timeline",
     tag: "Conversion"
   }
 ];
@@ -92,8 +92,8 @@ export default function HomePage() {
               documents, and emergencies through one calm, intelligent platform.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
-              <GradientCTAButton href="/early-access" label="Book a Demo" />
-              <GradientCTAButton href="/platform" label="Explore Platform" variant="secondary" />
+              <GradientCTAButton href="/early-access" label="Join Waitlist" />
+              <GradientCTAButton href="/features" label="Explore Features" variant="secondary" />
             </div>
             <p className="mt-4 text-sm text-text-secondary">
               Built for caregivers, seniors, and care teams navigating real-life complexity.
@@ -151,7 +151,7 @@ export default function HomePage() {
         </div>
         <PersonalizedCareJourneyTabs steps={journeySteps} />
         <div className="mt-6">
-          <GradientCTAButton href="/how-it-works" label="See Full Journey" />
+          <GradientCTAButton href="/features" label="See Full Feature Demo" />
         </div>
       </AnimatedSection>
 
@@ -169,13 +169,13 @@ export default function HomePage() {
         <div className="glass-card rounded-premium p-8 text-center lg:p-12">
           <h2 className="section-title text-navy">Need the right section quickly?</h2>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-text-secondary">
-            Start with Platform for product depth, How It Works for workflow, Solutions for role-specific value,
-            and Early Access when you are ready to talk.
+            Start with Features for interactive product walkthroughs, then move to Pricing and join the waitlist
+            when you are ready.
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
-            <GradientCTAButton href="/platform" label="Platform" />
-            <GradientCTAButton href="/how-it-works" label="How It Works" variant="secondary" />
-            <GradientCTAButton href="/early-access" label="Book Demo" variant="secondary" />
+            <GradientCTAButton href="/features" label="Features" />
+            <GradientCTAButton href="/pricing" label="Pricing" variant="secondary" />
+            <GradientCTAButton href="/early-access" label="Join Waitlist" variant="secondary" />
           </div>
         </div>
       </AnimatedSection>

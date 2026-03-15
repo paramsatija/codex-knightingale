@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 
 import { PremiumNav } from "@/components/PremiumNav";
 import { SiteFooter } from "@/components/SiteFooter";
+import { StickyWaitlistCTA } from "@/components/StickyWaitlistCTA";
 
 import "./globals.css";
 
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
         <PremiumNav />
         <main>{children}</main>
         <SiteFooter />
+        <StickyWaitlistCTA />
       </body>
     </html>
   );
