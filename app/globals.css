@@ -3,24 +3,24 @@
 @tailwind utilities;
 
 :root {
-  --color-bg: #f5f7ff;
+  --color-bg: #f8fcff;
   --color-surface: #ffffff;
   --color-text-primary: #0f1320;
   --color-text-secondary: #4f5f7c;
   --color-hairline: #dbe3f2;
 
-  --color-navy: #102a4d;
-  --color-sapphire: #3f6dff;
-  --color-mint: #36d6ad;
-  --color-lilac: #a089ff;
-  --color-coral: #ff5e78;
-  --color-gold: #f4c95b;
+  --color-navy: #123a61;
+  --color-sapphire: #3f7dff;
+  --color-mint: #1fd2b6;
+  --color-lilac: #8fdb4f;
+  --color-coral: #ff4f63;
+  --color-gold: #ffbd45;
 
-  --tint-sapphire: rgba(63, 109, 255, 0.18);
-  --tint-mint: rgba(54, 214, 173, 0.2);
-  --tint-lilac: rgba(160, 137, 255, 0.2);
-  --tint-gold: rgba(244, 201, 91, 0.18);
-  --tint-navy: rgba(16, 42, 77, 0.12);
+  --tint-sapphire: rgba(255, 95, 108, 0.2);
+  --tint-mint: rgba(31, 210, 182, 0.22);
+  --tint-lilac: rgba(143, 219, 79, 0.22);
+  --tint-gold: rgba(255, 189, 69, 0.2);
+  --tint-navy: rgba(88, 170, 255, 0.17);
 
   --glass-bg: rgba(255, 255, 255, 0.68);
   --glass-border: rgba(255, 255, 255, 0.88);
@@ -55,10 +55,13 @@ a {
   position: relative;
   overflow-x: clip;
   background:
-    radial-gradient(circle at 10% 12%, rgba(63, 109, 255, 0.24), transparent 42%),
-    radial-gradient(circle at 82% 22%, rgba(54, 214, 173, 0.24), transparent 40%),
-    radial-gradient(circle at 62% 76%, rgba(160, 137, 255, 0.26), transparent 42%),
-    linear-gradient(180deg, #f8faff 0%, #f5f7ff 42%, #f2f6ff 100%);
+    radial-gradient(circle at 12% 15%, rgba(79, 139, 255, 0.28), transparent 42%),
+    radial-gradient(circle at 82% 18%, rgba(33, 212, 184, 0.26), transparent 38%),
+    radial-gradient(circle at 24% 82%, rgba(255, 182, 53, 0.25), transparent 39%),
+    radial-gradient(circle at 78% 74%, rgba(255, 108, 108, 0.22), transparent 38%),
+    linear-gradient(180deg, #fcfeff 0%, #f8fcff 48%, #f5fbff 100%);
+  background-size: 180% 180%;
+  animation: ambientShift 24s ease-in-out infinite;
 }
 
 .container-shell {
@@ -124,13 +127,13 @@ a {
 
 @keyframes ctaPulse {
   0% {
-    box-shadow: 0 0 0 0 rgba(76, 125, 255, 0.42);
+    box-shadow: 0 0 0 0 rgba(255, 95, 108, 0.42);
   }
   70% {
-    box-shadow: 0 0 0 12px rgba(76, 125, 255, 0);
+    box-shadow: 0 0 0 12px rgba(255, 95, 108, 0);
   }
   100% {
-    box-shadow: 0 0 0 0 rgba(76, 125, 255, 0);
+    box-shadow: 0 0 0 0 rgba(255, 95, 108, 0);
   }
 }
 
@@ -164,6 +167,18 @@ a {
   animation-delay: var(--reveal-delay, 0s);
 }
 
+@keyframes ambientShift {
+  0% {
+    background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%, 50% 50%;
+  }
+  50% {
+    background-position: 18% 12%, 84% 24%, 16% 88%, 76% 68%, 50% 44%;
+  }
+  100% {
+    background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%, 50% 50%;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -181,6 +196,10 @@ a {
   }
 
   .cta-heavy::after {
+    animation: none;
+  }
+
+  .page-bg {
     animation: none;
   }
 }

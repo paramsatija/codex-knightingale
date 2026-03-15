@@ -6,7 +6,7 @@ export function StickyWaitlistCTA() {
       <div className="mx-auto flex w-full max-w-[980px] justify-end">
         <Link
           href="/early-access"
-          className="cta-heavy pointer-events-auto inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sapphire via-lilac to-mint px-6 py-3.5 text-sm font-semibold text-white shadow-[0_18px_44px_rgba(63,109,255,0.34)] transition duration-500 hover:-translate-y-0.5 hover:brightness-110"
+          className="cta-heavy pointer-events-auto inline-flex items-center justify-center rounded-full bg-gradient-to-r from-coral via-gold to-mint px-6 py-3.5 text-sm font-semibold text-white shadow-[0_18px_44px_rgba(255,95,108,0.34)] transition duration-500 hover:-translate-y-0.5 hover:brightness-110"
         >
           Join Waitlist
         </Link>

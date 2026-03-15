@@ -46,6 +46,26 @@ export const photoSets = {
       source: "Unsplash"
     }
   ],
+  features: [
+    {
+      src: "https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1600&q=80",
+      alt: "Caregiver and senior smiling together during a supportive conversation",
+      label: "Human-centered care",
+      source: "Unsplash"
+    },
+    {
+      src: "https://images.pexels.com/photos/7089408/pexels-photo-7089408.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      alt: "Professional caregiver reviewing a care schedule on a tablet",
+      label: "Coordinated workflows",
+      source: "Pexels"
+    },
+    {
+      src: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1600&q=80",
+      alt: "Healthcare professional speaking with a family in a bright setting",
+      label: "Trusted decisions",
+      source: "Unsplash"
+    }
+  ],
   platform: [
     {
       src: "https://images.pexels.com/photos/7551666/pexels-photo-7551666.jpeg?auto=compress&cs=tinysrgb&w=1600",

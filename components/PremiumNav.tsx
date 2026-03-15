@@ -68,7 +68,7 @@ export function PremiumNav() {
             <div className="hidden lg:block">
               <Link
                 href="/early-access"
-                className="cta-heavy inline-flex rounded-full bg-gradient-to-r from-sapphire via-lilac to-mint px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(63,109,255,0.32)] transition duration-500 hover:-translate-y-0.5 hover:brightness-110"
+                className="cta-heavy inline-flex rounded-full bg-gradient-to-r from-coral via-gold to-mint px-6 py-3 text-sm font-semibold text-white shadow-[0_14px_40px_rgba(255,95,108,0.32)] transition duration-500 hover:-translate-y-0.5 hover:brightness-110"
               >
                 Join Waitlist
               </Link>
@@ -111,7 +111,7 @@ export function PremiumNav() {
                 <Link
                   href="/early-access"
                   onClick={() => setMobileOpen(false)}
-                  className="cta-heavy block rounded-2xl bg-gradient-to-r from-sapphire via-lilac to-mint px-4 py-3 text-center text-sm font-semibold text-white"
+                  className="cta-heavy block rounded-2xl bg-gradient-to-r from-coral via-gold to-mint px-4 py-3 text-center text-sm font-semibold text-white"
                 >
                   Join Waitlist
                 </Link>
